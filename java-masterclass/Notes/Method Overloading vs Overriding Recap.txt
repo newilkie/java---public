@@ -1,0 +1,52 @@
+*Overloading does not have anything to do with polymorphism but Java developre often refer to overloading asss Compile Time Polymorphissm. 
+
+*In other words the compiler decided which method is going to be called bassed on the method name, return type and argument list.
+
+*We can overload static and instance methods (more about the difference between static and instance methods later int he course). 
+
+Method Overloading
+*Usually overloading happens inside a single class, but a method can also be treated as overloaded in the subclass of the class. 
+
+*That is because a subclass inherits one version of the method from the parent class and then the subclass can have another overloaded version of the method. 
+
+Method Overloading Rules
+*Methods will beconssidered overloaded if tboth follow the following rules
+	*Methods must have the ame method name. 
+	*Methods Must have different parameters. 
+
+*If methhods follow the rules above then they may or may not
+	*Have different return types.
+	*Have different accessss modeifiers. 
+	*Throw different checked or unchecked exceptions(More on execptions later in the course). 
+
+Method Overriding
+ *Method overriding means defining a method in a child classs that already exisssts in the parent class with the ssame ssignature (sssame name, same arguments).
+
+ * By extending the parent class the child eclass gets all the methods defined in the parent class (those methods are also known as derived methods).
+
+ * Method overriding is also known as Runtime Polymorphism and Dynamic Method Dispatch, because the method that is going ot be called is decided at runtime by the JVM. 
+
+Method Overriding
+
+ * When we override a method it's recommened to put @Overrid e immediately above the method definition. This is an annotation that the compiler reads and will then show us an error if we don't follow overriding rules correctly.
+
+ * We can't override static methods only instance methods. 
+
+
+Method Overriding Rule
+ * Method will be co nsssidered overridden if we follow these rules: 
+	* It must have same name and same arguments. 
+	* Return type can be a subclass of the return type in the parent 		  class. 
+	* It can't have a lower access modifier. 
+	* For example if the parent method is protected then using private in 	  the child is not allowed but using public in the child would be 	  allowed. 
+Method Overriding
+ * There are also ssome important points about method overriding to keep in       mind
+	* Only inherited methods can be overrriden, in other words methods can 	  be overridden only in child classes. 	
+	* Constructors and private methods cannot be overridden. 
+	* Methods that are final cannot be overridden
+	* A subclasss can use super.methodName() to call the superclasss 	  	  version of an overridden method. 
+
+
+
+
+	
