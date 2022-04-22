@@ -19,22 +19,22 @@ public class Main {
         // Override the appropriate methods to demonstrate polymorphism in use.
         // put all classes in the one java file (this one).
 
-        Car car = new Car("Lancer", 6);
+        Car car = new Car(6,"Lancer");
         System.out.println(car.startEngine());
         System.out.println(car.accelerate());
         System.out.println(car.brake());
 
-        Mitsubishi mitsubishi = new Mitsubishi("Lancer", 6);
+        Mitsubishi mitsubishi = new Mitsubishi(6,"Lancer");
         System.out.println(mitsubishi.startEngine());
         System.out.println(mitsubishi.accelerate());
         System.out.println(mitsubishi.brake());
 
-        Ford ford = new Ford("F150", 6);
+        Ford ford = new Ford(6,"F150");
         System.out.println(ford.startEngine());
         System.out.println(ford.accelerate());
         System.out.println(ford.brake());
 
-        Holden holden = new Holden("Holden Commodore ", 6);
+        Holden holden = new Holden(6,"Holden Commodore ");
         System.out.println(holden.startEngine());
         System.out.println(holden.accelerate());
         System.out.println(holden.brake());
@@ -49,7 +49,7 @@ class Car{
     private String name;
     private int wheels;
 
-    public Car(String name,  int cylinders) {
+    public Car(int cylinders, String name) {
         this.engine = true;
         this.cylinders = cylinders;
         this.name = name;
@@ -86,8 +86,8 @@ class Car{
 }
 
 class Mitsubishi extends Car{
-    public Mitsubishi(String name, int cylinders) {
-        super(name, cylinders);
+    public Mitsubishi(int cylinders, String name) {
+        super(cylinders, name);
     }
 
     @Override
@@ -107,8 +107,8 @@ class Mitsubishi extends Car{
 }
 
 class Ford extends Car{
-    public Ford(String name, int cylinders) {
-        super(name, cylinders);
+    public Ford(int cylinders,String name) {
+        super(cylinders, name);
     }
 
     @Override
@@ -128,8 +128,8 @@ class Ford extends Car{
 }
 
 class Holden extends Car{
-    public Holden(String name, int cylinders) {
-        super(name, cylinders);
+    public Holden(int cylinders,String name ) {
+        super(cylinders, name);
     }
 
     @Override
