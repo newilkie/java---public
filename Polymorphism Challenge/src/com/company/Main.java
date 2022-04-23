@@ -38,8 +38,6 @@ public class Main {
         System.out.println(holden.startEngine());
         System.out.println(holden.accelerate());
         System.out.println(holden.brake());
-
-
     }
 }
 
